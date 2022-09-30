@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+#buttons{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.App-title {
+  text-align: center;
+}

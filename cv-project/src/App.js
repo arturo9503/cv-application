@@ -1,32 +1,26 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import Form from './components/Form.js';
+import Resume from './components/Resume.js';
 import './App.css';
 
 const welcome = "Welcome to React";
 
 function App() {
+  const [show,setShow]=React.useState(true)
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
     <div>
     <Welcome></Welcome>
-    <Form></Form>
+    {
+    show?<Form></Form>:null
+    }
+    <Resume></Resume>
+    <div id='buttons'>
+    {/* <button onClick={()=>setShow(true)}>Show</button>
+    <button onClick={()=>setShow(false)}>Hide</button> */}
     </div>
+    </div>
+
   );
 }
 
